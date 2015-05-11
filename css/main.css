@@ -13,6 +13,9 @@
 .fs-13 {
   font-size: 13px;
 }
+.mb-20 {
+  margin-bottom: 40px;
+}
 .mb-40 {
   margin-bottom: 40px;
 }
@@ -23,6 +26,28 @@
   float: none;
   margin: 0 auto;
 }
+label {
+  font-weight: 600;
+}
+.form-control {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #70808b;
+  font-size: 13px !important;
+}
+.form-control:focus {
+  border-color: #393185;
+  -webkit-box-shadow: 0 0 2px #c9c9c9;
+  -moz-box-shadow: 0 0 2px #c9c9c9;
+  box-shadow: 0 0 2px #c9c9c9;
+}
+textarea {
+  resize: vertical;
+}
 .header {
   padding: 20px 0;
   text-transform: uppercase;
@@ -30,7 +55,7 @@
 }
 .header .logo {
   display: block;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .header .header-text {
   font-size: 11px;
@@ -234,9 +259,13 @@ body {
   border-bottom: solid 1px #CCC;
   color: #fff;
 }
-.page-title h1 {
+.page-title h1,
+.page-title .title {
+  margin: 0;
   color: #fff;
-  margin-left: 10px;
+  font-size: 24px;
+  line-height: 36px;
+  padding: 5px 0;
 }
 .page-title .breadcrumb {
   margin: 0;
@@ -254,7 +283,7 @@ body {
   color: #fff;
 }
 @media (max-width: 580px) {
-  .page-title h1.pull-left,
+  .page-title .pull-left,
   .page-title ul.pull-right {
     width: 100%;
     margin-left: 0;
@@ -321,8 +350,118 @@ body {
   border: solid 1px #eee;
   border-left: solid 2px #393185;
 }
+.content .post img {
+  margin-bottom: 20px;
+}
+.content .link-list {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 20px 0;
+}
+.content .link-list li {
+  padding: 3px 0;
+  line-height: 20px;
+}
+.content .link-list li i {
+  color: #393185;
+  font-size: 16px;
+  margin-right: 12px;
+}
+.content .link-list li span {
+  color: #000;
+  font-weight: 600;
+  margin-right: 15px;
+}
+.preview-box {
+  overflow: hidden;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  background: #f7f7f7;
+  border-right: solid 2px #393185;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.preview-box .preview-box-img img {
+  display: block;
+  margin: 5px 10px 10px 0;
+}
+.preview-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.preview-box .legend {
+  padding: 0;
+  list-style: none;
+  margin: 0 0 10px 0;
+  font-size: 13px;
+}
+.preview-box .legend li {
+  margin-right: 10px;
+  display: inline-block;
+}
+.preview-box .legend .fa {
+  color: #393185;
+  margin-right: 5px;
+}
+.preview-box .btn-more {
+  margin-right: 10px;
+}
+.blog-post {
+  margin-bottom: 40px;
+}
+.blog-post .post-tags {
+  padding: 5px 0 8px;
+  margin-bottom: 10px;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
+}
+.blog-post .post-tags ul {
+  margin: 0;
+  padding: 2px 0;
+}
+.blog-post .post-tags ul li {
+  font-size: 12px;
+  padding-right: 6px;
+  display: inline-block;
+}
+.blog-post .post-tags ul li i {
+  margin-right: 5px;
+}
+.blog-post .post-tags ul li i.fa-tags {
+  margin-right: 0;
+}
+.blog-post .post-tags ul li a {
+  color: #555;
+  font-size: 11px;
+  display: inline;
+  padding: 3px 7px;
+  background: #f4f4f4;
+}
+.blog-post .post-tags ul li a:hover {
+  color: #fff;
+  background: #393185;
+  text-decoration: none;
+}
+.blog-post .post-tags ul li a.reply-num {
+  padding: 0;
+  color: #333333;
+  background: transparent;
+}
+.blog-post .post-tags ul li a.reply-num:hover {
+  color: #333333;
+  text-decoration: underline;
+  background: transparent;
+}
+.blog-post .post-img {
+  margin: 20px 0;
+}
 .side-box {
   margin-bottom: 20px;
+}
+.side-box li {
+  margin-bottom: 4px;
 }
 .footer {
   bottom: 0;
@@ -371,6 +510,16 @@ h4 a,
 h5 a,
 h6 a {
   color: #000;
+  text-decoration: none;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  color: #393185;
+  text-decoration: none;
 }
 .headline {
   display: block;
@@ -386,15 +535,10 @@ h6 a {
   display: inline-block;
   border-bottom: 1px solid #393185;
 }
-h1 {
-  margin: 0;
-  color: #666;
-  font-size: 24px;
-  line-height: 36px;
-  padding: 5px 0;
-}
+h1,
 h2 {
   font-size: 22px;
+  margin: 0 0 30px 0;
 }
 h3 {
   font-size: 20px;
@@ -404,9 +548,10 @@ h4 {
   font-size: 16px;
   font-weight: 600;
 }
-li,
-li a {
-  color: #555;
+a,
+a:focus,
+a:visited {
+  text-decoration: none;
 }
 strong {
   font-weight: 700;

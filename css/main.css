@@ -48,6 +48,9 @@ label {
 textarea {
   resize: vertical;
 }
+.error {
+  border-color: brown;
+}
 .header {
   padding: 20px 0;
   text-transform: uppercase;
